@@ -1,12 +1,11 @@
 # safelist - only build on pushes to these branches
+language: go
 branches:
   only:
   - master
   - travis
-# we needed this if wanted to build Hugo manually
-# language: go
-# go:
-# - 1.10
+go:
+- 1.11
 install:
 # change this version as it goes up
 # get and install Hugo
