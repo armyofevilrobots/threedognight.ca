@@ -1,0 +1,34 @@
+# safelist - only build on pushes to these branches
+branches:
+  only:
+  - master
+  - travis
+# we needed this if wanted to build Hugo manually
+# language: go
+# go:
+# - 1.10
+install:
+# change this version as it goes up
+# get and install Hugo
+- wget https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.deb
+- sudo dpkg -i hugo*.deb
+# clone the parent repository, note this is different from Parsia-Clone
+- git clone https://github.com/armyofevilrobots/threedognight.ca
+- cd threedognight.ca
+script:
+# build the website with Hugo, output will be in public directory
+- hugo
+# deploy public directory to the bucket
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: threedognight.ca
+  region: ca-central-1
+  local-dir: public
+  skip_cleanup: true
+  acl: public_read
+  on:
+    # make it work on branch other than master
+    # change this to master or any other branch if needed
+    branch: master
