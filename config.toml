@@ -18,3 +18,10 @@ uglyurls = true
     dateFormatToUse = "2006-01-02"
     headerimg = "/images/threedognight450.jpg"
     otherheaderimg = "/images/3puppers.jpg"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About Fender"
+    url = "/fenderintro.html"
+    weight = -100
