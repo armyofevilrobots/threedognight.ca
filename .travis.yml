@@ -6,12 +6,15 @@ branches:
   - travis
 go:
 - 1.11
+# Install the AWS CLI (SLooooooW)
+before_install:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
 install:
 # change this version as it goes up
 # get and install Hugo
 - wget https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.deb
 - sudo dpkg -i hugo*.deb
-# clone the parent repository, note this is different from Parsia-Clone
 - git clone https://github.com/armyofevilrobots/threedognight.ca
 - cd threedognight.ca
 script:
@@ -20,10 +23,10 @@ script:
 # deploy public directory to the bucket
 deploy:
   provider: s3
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  bucket: threedognight.ca
-  region: ca-central-1
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: $S3_BUCKET
+  region: $S3_REGION
   local-dir: public
   skip_cleanup: true
   acl: public_read
@@ -31,3 +34,5 @@ deploy:
     # make it work on branch other than master
     # change this to master or any other branch if needed
     branch: master
+after_deploy:
+- aws cloudfront create-invalidation --paths '/*' --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID
