@@ -4,9 +4,7 @@ date: 2018-12-08T17:15:00Z
 author: Helen Highwater
 ---
 
-```
 ![Sad Fender](/images/fender-vets.jpg "Sad Fender")
-```
 
 Fender won our hearts when we first read about him in the news.
 
