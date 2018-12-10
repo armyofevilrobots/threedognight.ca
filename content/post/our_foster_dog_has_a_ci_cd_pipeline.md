@@ -62,6 +62,8 @@ Now we need to setup travis.
 
 ### Configuring Travis CI
 
+This is mostly cribbed from [parsiya.net's travis -> S3 docs](https://parsiya.net/blog/2018-04-24-deploying-my-knowledge-base-at-parsiya.io-to-s3-with-travis-ci/)...
+
 1. Go to [Travis CI](https://travis-ci.com/) and login using your github creds.
 2. Find your repo from the menu on the left. And turn on CI/CD for it (that'll automagically generate 
    a webhook and get everything up and running).
@@ -70,6 +72,7 @@ Now we need to setup travis.
   * AWS_SECRET_ACCESS_KEY
   * S3_BUCKET
   * S3_REGION
+  * AWS_CLOUDFRONT_DISTRIBUTION_ID
 4. Add the .travis.yml below, customized for your repo of course ;) if you've 
    branched (because you don't wanna redeploy _our_ blog).
 
