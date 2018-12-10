@@ -1,11 +1,13 @@
-Three Dog Night Hugo Source
-===========================
+---
+title: Our Foster Dog Has a CI/CD Pipeline
+date: 2018-12-08T12:00:00Z
+author: Derek
+---
 
-[![Build Status](https://travis-ci.org/armyofevilrobots/threedognight.ca.svg?branch=master)](https://travis-ci.org/armyofevilrobots/threedognight.ca)
+Disclaimer: This is nerdy AF. If you're not into CI/CD pipelines, build automation, and serverless computing,
+you should probably turn around and run screaming. Abandon all hope, etc. etc.
 
-Builds the http://threedognight.ca website.
-
-# Our Foster Dog Has a CI/CD Pipeline...
+---
 
 It all started so innocently...
 <!--more-->
