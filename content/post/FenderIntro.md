@@ -12,7 +12,7 @@ Fender was struck by a vehicle and left for dead on the side of the highway at o
 
 While the owner was found, they relinquished him to the SPCA. 
 
-Fender had a shattered leg, pelvis and both femoral heads. This poor pup has undergone orthopedic surgery to repair his leg, plates put in and both femoral heads removed. 
+Fender had a shattered leg, pelvis and<!--more--> both femoral heads. This poor pup has undergone orthopedic surgery to repair his leg, plates put in and both femoral heads removed. 
 Throughout the ordeal he has remained sweet, positive and very friendly to everyone he meets, despite being in immeasurable pain.
 This smart & gentle boy has already been such a trooper through it all. 
 
