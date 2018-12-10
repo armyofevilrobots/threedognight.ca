@@ -2,3 +2,19 @@ title = "Three Dog Night"
 languageCode = "en-us"
 baseurl = "http://threedognight.ca/"
 theme = "threedognight"
+#theme = "minimal-bootstrap-hugo-theme"
+sectionPagesMenu = "main"
+
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "pygments"
+uglyurls = true
+
+[permalinks]
+  post = "/:filename/"
+
+[params]
+    description = "Fostering a woof with a couple boofs"
+    dateFormatToUse = "2006-01-02"
+    headerimg = "/images/threedognight450.jpg"
+    otherheaderimg = "/images/3puppers.jpg"

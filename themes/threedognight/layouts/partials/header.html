@@ -2,11 +2,16 @@
 	<div class="main-header-content">
 		<h1 class="blog-title">
 			<a href="{{ "/" | relLangURL }}">
-				{{ if .Site.Params.logoTitle }}
+        {{ if $.Param "headerimg" }}
+            <img src="{{ $.Param "headerimg" }}"></img>
+				{{ else if .Site.Params.logoTitle }}
 					{{ .Site.Params.logoTitle | safeHTML }}
 				{{ else }}
            {{ .Site.Title }}
 				{{ end }}
+        {{ if $.Param "otherheaderimg" }}
+            <img src="{{ $.Param "otherheaderimg" }}"></img>
+        {{ end }}
 			</a>
 		</h1>
 		<h2 class="blog-description">{{ .Site.Params.description }}</h2>
