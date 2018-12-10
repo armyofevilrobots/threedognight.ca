@@ -4,6 +4,7 @@ branches:
   only:
   - master
   - travis
+cache: pip
 go:
 - 1.11
 # Install the AWS CLI (SLooooooW)
